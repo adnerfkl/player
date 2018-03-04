@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_bg"
+    tools:context="com.fkl.player.activity.PlayAudioActivity">
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+<ImageView
+    android:id="@+id/iv_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/now_playing_matrix_01"
+    android:visibility="gone"
+   />
+        <com.fkl.player.view.BaseVisualizerView
+            android:id="@+id/visualizerView"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+              android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:text="演唱者"/>
+        <TextView
+            android:id="@+id/tv_audio_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            android:text="歌名"/>
+        </LinearLayout>
+<LinearLayout
+    android:id="@+id/ll_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+ <TextView
+     android:id="@+id/tv_time"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="00:00/3:00"
+     android:layout_gravity="right"
+     android:layout_marginRight="8dp"
+     android:textColor="#FFFFFF"/>
+
+    <SeekBar
+        android:id="@+id/sb_audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:maxHeight="5dp"
+        android:minHeight="5dp"
+        android:progress="80"
+        android:progressDrawable="@drawable/audio_progress_horizontal"
+        android:thumb="@drawable/seek_thumb"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/btn_audio_playmode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/btn_audio_playmode_normal_selector" />
+    <Button
+        android:id="@+id/btn_audio_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/btn_audio_pre_selector" />
+
+
+    <Button
+        android:id="@+id/btn_audio_start_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/btn_audio_pause_selector" />
+
+    <Button
+        android:id="@+id/btn_audio_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/btn_audio_next_selector" />
+
+    <Button
+        android:id="@+id/btn_lyrc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/btn_lyrc_selector" />
+</LinearLayout>
+</LinearLayout>
+    <com.fkl.player.view.ShowLyricView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_top"
+        android:layout_above="@id/ll_bottom"
+        android:layout_margin="10dp"
+        android:id="@+id/show_lyric"
+
+        />
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.fkl.player.activity.PlayVideoActivity">
+<com.fkl.player.view.VideoView
+    android:id="@+id/vd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"/>
+    <include layout="@layout/media_controller"/>
+    <include layout="@layout/voice_controller"/>
+    <include layout="@layout/light_controller"/>
+    <include layout="@layout/play_controller"/>
+    <include layout="@layout/buffer_layout"
+        android:id="@+id/ll_buffer"
+      />
+    <include layout="@layout/loading_layout"
+        android:id="@+id/ll_loading"
+        />
+</RelativeLayout>

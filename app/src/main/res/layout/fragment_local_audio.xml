@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<ListView
+    android:id="@+id/lv_local_audio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@null"/>
+
+
+    <TextView
+        android:id="@+id/tv_hide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂无音频"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:visibility="gone"/>
+</LinearLayout>
